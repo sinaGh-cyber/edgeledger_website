@@ -17,7 +17,7 @@
   </head>
   <body id="home">
     <header class="hero blog">
-      <div class="navbar" id="navbar">
+      <div class="navbar top" id="navbar">
         <h1 class="logo">
           <span class="text-primary"><i class="fas fa-book-open"></i>Edge</span>
           Ledger
@@ -79,5 +79,30 @@
       </div>
       <p>copyright &copy; 2021 - EdgeLedger</p>
     </footer>
+    <script>
+      const navbarEl = document.getElementById('navbar');
+      const heroElHeight = document.querySelector('.hero').offsetHeight;
+      const navbarElHeight = navbarEl.offsetHeight;
+      let scrolled = false;
+
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > heroElHeight - navbarElHeight) {
+          navbarEl.classList.remove('top');
+          if (!scrolled) {
+            console.log('here');
+            navbarEl.style.transform = 'translateY(-70px)';
+          }
+          setTimeout(() => {
+            navbarEl.style.transform = 'translateY(0)';
+            scrolled = true;
+          }, 200);
+        } else {
+          navbarEl.classList.add('top');
+          scrolled = false;
+        }
+      });
+
+      // console.log(heroElHeight, navbarElHeight);
+    </script>
   </body>
 </html>

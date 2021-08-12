@@ -241,20 +241,51 @@
       </div>
       <p>copyright &copy; 2021 - EdgeLedger</p>
     </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.5.0.min.js"
+      integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+      crossorigin="anonymous"
+    ></script>
     <script>
       const navbarEl = document.getElementById('navbar');
       const heroElHeight = document.querySelector('.hero').offsetHeight;
       const navbarElHeight = navbarEl.offsetHeight;
+      let scrolled = false;
 
       window.addEventListener('scroll', () => {
-        if (window.pageYOffset < heroElHeight - navbarElHeight - 20) {
-          navbarEl.classList.add('top');
-        } else {
+        if (window.pageYOffset > heroElHeight - navbarElHeight) {
           navbarEl.classList.remove('top');
+          if (!scrolled) {
+            console.log('here');
+            navbarEl.style.transform = 'translateY(-70px)';
+          }
+          setTimeout(() => {
+            navbarEl.style.transform = 'translateY(0)';
+            scrolled = true;
+          }, 200);
+        } else {
+          navbarEl.classList.add('top');
+          scrolled = false;
         }
       });
 
-      console.log(heroElHeight, navbarElHeight);
+      // console.log(heroElHeight, navbarElHeight);
+
+      // Smooth Scrolling
+      $('#navbar a, .btn').on('click', function (e) {
+        if (this.hash !== '') {
+          e.preventDefault();
+
+          const hash = this.hash;
+
+          $('html, body').animate(
+            {
+              scrollTop: $(hash).offset().top - 100,
+            },
+            800
+          );
+        }
+      });
     </script>
   </body>
 </html>
