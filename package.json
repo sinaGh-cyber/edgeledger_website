@@ -1,0 +1,22 @@
+{
+  "name": "edgeledger_website",
+  "version": "1.0.0",
+  "description": "my coded along project with some modification",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sinaGh-cyber/EdgeLedger.git"
+  },
+  "keywords": [
+    "EdgeLedger"
+  ],
+  "author": "Sina Gh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sinaGh-cyber/EdgeLedger/issues"
+  },
+  "homepage": "https://github.com/sinaGh-cyber/EdgeLedger#readme"
+}
