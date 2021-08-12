@@ -52,7 +52,7 @@
 
 /* Flex */
 
-.flex-items {
+.flex-item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,15 +60,14 @@
   height: 100%;
 }
 
-.flex-items > div {
+.flex-item > div {
   padding: 20px;
 }
 
 /* Flex columns */
 
-.flex-columns.flex-reverse .row{
-flex-direction: row-reverse;
-
+.flex-columns.flex-reverse .row {
+  flex-direction: row-reverse;
 }
 
 .flex-columns .row {
