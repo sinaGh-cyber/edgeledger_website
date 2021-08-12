@@ -4,12 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="./node_modules/lightbox2/dist/css/lightbox.min.css"
     />
     <link rel="stylesheet" href="css/utilities.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -117,20 +122,69 @@
         </header>
         <div class="row">
           <div class="column">
-            <img src="./image_resources/cases/cases1.jpg" alt="" />
-            <img src="./image_resources/cases/cases2.jpg" alt="" />
+            <a
+              href="./image_resources/cases/cases1.jpg"
+              data-lightbox="cases"
+              data-title="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem,
+            neque?"
+              ><img src="./image_resources/cases/cases1.jpg" alt=""
+            /></a>
+
+            <a
+              href="./image_resources/cases/cases2.jpg"
+              data-lightbox="cases"
+              data-title="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem,
+          neque?"
+              ><img src="./image_resources/cases/cases2.jpg" alt=""
+            /></a>
           </div>
           <div class="column">
-            <img src="./image_resources/cases/cases3.jpg" alt="" />
-            <img src="./image_resources/cases/cases4.jpg" alt="" />
+            <a
+              href="./image_resources/cases/cases3.jpg"
+              data-lightbox="cases"
+              data-title="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem,
+          neque?"
+              ><img src="./image_resources/cases/cases3.jpg" alt=""
+            /></a>
+            <a
+              href="./image_resources/cases/cases4.jpg"
+              data-lightbox="cases"
+              data-title="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem,
+        neque?"
+              ><img src="./image_resources/cases/cases4.jpg" alt=""
+            /></a>
           </div>
           <div class="column">
-            <img src="./image_resources/cases/cases5.jpg" alt="" />
-            <img src="./image_resources/cases/cases6.jpg" alt="" />
+            <a
+              href="./image_resources/cases/cases5.jpg"
+              data-lightbox="cases"
+              data-title="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem,
+          neque?"
+              ><img src="./image_resources/cases/cases5.jpg" alt=""
+            /></a>
+            <a
+              href="./image_resources/cases/cases6.jpg"
+              data-lightbox="cases"
+              data-title="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem,
+        neque?"
+              ><img src="./image_resources/cases/cases6.jpg" alt=""
+            /></a>
           </div>
           <div class="column">
-            <img src="./image_resources/cases/cases7.jpg" alt="" />
-            <img src="./image_resources/cases/cases8.jpg " alt="" />
+            <a
+              href="./image_resources/cases/cases7.jpg"
+              data-lightbox="cases"
+              data-title="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem,
+          neque?"
+              ><img src="./image_resources/cases/cases7.jpg" alt=""
+            /></a>
+            <a
+              href="./image_resources/cases/cases8.jpg"
+              data-lightbox="cases"
+              data-title="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem,
+        neque?"
+              ><img src="./image_resources/cases/cases8.jpg" alt=""
+            /></a>
           </div>
         </div>
       </section>
@@ -246,6 +300,7 @@
       integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
       crossorigin="anonymous"
     ></script>
+    <script src="./node_modules/lightbox2/dist/js/lightbox.min.js"></script>
     <script>
       const navbarEl = document.getElementById('navbar');
       const heroElHeight = document.querySelector('.hero').offsetHeight;
@@ -256,7 +311,7 @@
         if (window.pageYOffset > heroElHeight - navbarElHeight) {
           navbarEl.classList.remove('top');
           if (!scrolled) {
-            console.log('here');
+            // console.log('here');
             navbarEl.style.transform = 'translateY(-70px)';
           }
           setTimeout(() => {
