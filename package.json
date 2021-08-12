@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/sinaGh-cyber/EdgeLedger/issues"
   },
-  "homepage": "https://github.com/sinaGh-cyber/EdgeLedger#readme"
+  "homepage": "https://github.com/sinaGh-cyber/EdgeLedger#readme",
+  "dependencies": {
+    "lightbox2": "^2.11.3"
+  }
 }
